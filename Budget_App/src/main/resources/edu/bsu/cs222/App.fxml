@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Content" prefHeight="730.0" prefWidth="1061.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.PrimaryController">
+   <Label alignment="CENTER" layoutX="33.0" layoutY="117.0" prefHeight="27.0" prefWidth="212.0" style="&#10;" text="Select A Month To View" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="System Bold Italic" size="18.0" />
+      </font>
+   </Label>
+   <Button layoutX="47.0" layoutY="144.0" mnemonicParsing="false" onAction="#showJanRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="January" textFill="WHITE" />
+   <Button layoutX="47.0" layoutY="176.0" mnemonicParsing="false" onAction="#showFebRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="February" textFill="WHITE" />
+   <Button layoutX="47.0" layoutY="207.0" mnemonicParsing="false" onAction="#showMarRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="March" textFill="WHITE">
+      <effect>
+         <DropShadow />
+      </effect>
+   </Button>
+   <Button layoutX="47.0" layoutY="238.0" mnemonicParsing="false" onAction="#showAprRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="April" textFill="WHITE" />
+   <Button layoutX="47.0" layoutY="269.0" mnemonicParsing="false" onAction="#showMayRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="May" textFill="WHITE" />
+   <Button layoutX="47.0" layoutY="300.0" mnemonicParsing="false" onAction="#showJunRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="June" textFill="WHITE" />
+   <Button layoutX="47.0" layoutY="332.0" mnemonicParsing="false" onAction="#showJulRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="July" textFill="WHITE" />
+   <Button layoutX="47.0" layoutY="363.0" mnemonicParsing="false" onAction="#showAugRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="August" textFill="WHITE" />
+   <Button layoutX="47.0" layoutY="394.0" mnemonicParsing="false" onAction="#showSepRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="September" textFill="WHITE" />
+   <Button layoutX="47.0" layoutY="457.0" mnemonicParsing="false" onAction="#showNovRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="November" textFill="WHITE" />
+   <Button layoutX="47.0" layoutY="425.0" mnemonicParsing="false" onAction="#showOctRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="October" textFill="WHITE" />
+   <Button layoutX="47.0" layoutY="489.0" mnemonicParsing="false" onAction="#showDecRealSpending" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="December" textFill="WHITE" />
+   <ComboBox fx:id="categoryComboBox" layoutX="554.0" layoutY="24.0" prefHeight="25.0" prefWidth="130.0" promptText="Pick A Category">
+      <items>
+         <FXCollections fx:factory="observableArrayList">
+            <String fx:id="income" fx:value="Income" />
+            <String fx:id="tuition" fx:value="Tuition" />
+            <String fx:id="rent" fx:value="Rent" />
+            <String fx:id="utilities" fx:value="Utilities" />
+            <String fx:id="groceries" fx:value="Groceries" />
+            <String fx:id="diningout" fx:value="DiningOut" />
+            <String fx:id="savings" fx:value="Savings" />
+            <String fx:id="car" fx:value="Car" />
+            <String fx:id="entertainment" fx:value="Entertainment" />
+            <String fx:id="subscription" fx:value="Subscription" />
+            <String fx:id="other" fx:value="Other" />
+         </FXCollections>
+      </items>
+   </ComboBox>
+   <Button layoutX="853.0" layoutY="24.0" mnemonicParsing="false" onAction="#updateMoneyValues" text="Update" />
+   <TextField fx:id="realExpenseAmountTxtField" layoutX="692.0" layoutY="24.0" promptText="Enter An Amount" />
+   <Label layoutX="287.0" layoutY="28.0" prefHeight="17.0" prefWidth="116.0" text="Input Expenses Here" textFill="WHITE">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font>
+   </Label>
+   <ComboBox fx:id="monthComboBox" layoutX="409.0" layoutY="24.0" prefHeight="25.0" prefWidth="137.0" promptText="Pick A Month">
+      <items>
+         <FXCollections fx:factory="observableArrayList">
+            <String fx:id="updateBudget" fx:value="Update Budget" />
+            <String fx:id="January" fx:value="January" />
+            <String fx:id="February" fx:value="February" />
+            <String fx:id="March" fx:value="March" />
+            <String fx:id="April" fx:value="April" />
+            <String fx:id="May" fx:value="May" />
+            <String fx:id="June" fx:value="June" />
+            <String fx:id="July" fx:value="July" />
+            <String fx:id="August" fx:value="August" />
+            <String fx:id="September" fx:value="September" />
+            <String fx:id="October" fx:value="October" />
+            <String fx:id="November" fx:value="November" />
+            <String fx:id="December" fx:value="December" />
+         </FXCollections>
+      </items>
+   </ComboBox>
+   <Pane layoutX="264.0" layoutY="76.0" prefHeight="640.0" prefWidth="361.0" style="-fx-background-color: grey;">
+      <Label fx:id="leftLabel" layoutX="140.0" layoutY="1.0" text="Budget" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="spendingPlanTxtArea" editable="false" layoutX="6.0" layoutY="337.0" prefHeight="296.0" prefWidth="349.0" />
+      <PieChart fx:id="budgetPieChart" layoutX="8.0" layoutY="36.0" prefHeight="302.0" prefWidth="349.0" />
+   </Pane>
+   <Pane layoutX="672.0" layoutY="76.0" prefHeight="640.0" prefWidth="361.0" style="-fx-background-color: grey;">
+      <Label fx:id="rightLabel" layoutX="99.0" layoutY="1.0" text="Real Spending" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="realSpendingTxtArea" editable="false" layoutX="6.0" layoutY="336.0" prefHeight="296.0" prefWidth="349.0" />
+      <PieChart fx:id="realSpendingPieChart" layoutY="40.0" prefHeight="296.0" prefWidth="361.0" />
+   </Pane>
+   <Label fx:id="expenseAmountErrorLbl" layoutX="409.0" layoutY="56.0" prefHeight="17.0" prefWidth="386.0" text=" " textFill="WHITE" />
+   <Button fx:id="exitButton" layoutX="917.0" layoutY="17.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="39.0" prefWidth="130.0" style="-fx-background-color: red;" text="Save &amp; Exit" textFill="WHITE">
+      <font>
+         <Font name="Gill Sans Ultra Bold Condensed" size="19.0" />
+      </font>
+   </Button>
+   <Label layoutX="14.0" prefHeight="73.0" prefWidth="250.0" text="Budgeting" textFill="WHITE">
+      <font>
+         <Font name="System Bold Italic" size="48.0" />
+      </font>
+   </Label>
+   <Label layoutX="34.0" layoutY="57.0" text="App" textFill="WHITE">
+      <font>
+         <Font name="Haettenschweiler" size="48.0" />
+      </font>
+   </Label>
+   <Button fx:id="activeSideButton" layoutX="634.0" layoutY="316.0" mnemonicParsing="false" onAction="#changeActiveSide" prefHeight="25.0" prefWidth="31.0" text="&gt;" />
+   <Button layoutX="47.0" layoutY="541.0" mnemonicParsing="false" onAction="#showBudget" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: grey;" text="Budget" textFill="WHITE" />
+</AnchorPane>

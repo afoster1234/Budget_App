@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0"
+            prefWidth="558.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.PrimaryController">
+   <Button layoutX="167.0" layoutY="199.0" mnemonicParsing="false" onAction="#createNewUser" prefHeight="41.0"
+           prefWidth="224.0" text="Get Started">
+      <font>
+         <Font name="Gill Sans Ultra Bold Condensed" size="19.0"/>
+      </font>
+   </Button>
+   <Label layoutX="22.0" layoutY="20.0" text="Enter Your Desired Credentials" textFill="WHITE">
+      <font>
+         <Font name="System Bold Italic" size="36.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="newUsername" layoutX="168.0" layoutY="80.0" prefHeight="41.0" prefWidth="224.0"
+              promptText="Username"/>
+   <TextField fx:id="newPassword" layoutX="167.0" layoutY="140.0" prefHeight="41.0" prefWidth="224.0"
+              promptText="Password"/>
+   <Label fx:id="checkUserName" layoutX="152.0" layoutY="253.0" prefHeight="17.0" prefWidth="247.0" textFill="WHITE"/>
+</AnchorPane>
